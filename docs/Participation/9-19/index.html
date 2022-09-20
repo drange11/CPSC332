@@ -4,14 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>9-16 Participation</title>
+  <title>9-16 Participation (Fake form)</title>
 </head>
 <body>
+    <h1>Hello World! New web page, who is this?</h1>
+    <img src="icee.jpg" alt="">
     <form action="submission.html">
-        <label for="first">First Name</label>
-        <input type="text" id="first" name="first">
-
-        <input type="submit">
+        <p>
+            <label for="first">First Name</label>
+            <input value="Default Value" type="text" id="first" name="first" placeholder="First name only please">
+        </p>
+        <p>
+            <label for="last">Last Name</label>
+            <input type="text" id="last" name="last"  placeholder="Last name only please">
+        </p>
+        <p>
+            <label for="area">Tell me a story...</label>
+            <textarea id="area" type="textarea" rows="3" cols="4"
+                placeholder="Enter multi line text here">
+            </textarea>
+        </p>
+        <p>
+            <label for="radio1">pick your favorite</label>
+            <input type="radio" name="radio1" value="1" checked>
+            <input type="radio" name="radio1" value="2">
+            <input type="radio" name="radio1" value="3">
+        </p>
+        <p>
+            <label for="check1">check one check all!</label>
+            <input type="checkbox" name="check1" checked>
+            <input type="checkbox" name="check1">
+        </p>
+        <p>
+            <input type="button" value="Home">
+        </p>
+        <input type="submit" value="Click me! If you dare...">
     </form>
 </body>
 </html>
