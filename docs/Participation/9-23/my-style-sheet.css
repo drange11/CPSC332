@@ -1,0 +1,8 @@
+li {
+    background-color:bisque
+}
+
+#main-header:hover::after {
+    content: "BOO!";
+    background-color: crimson;
+}
