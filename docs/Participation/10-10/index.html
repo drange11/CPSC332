@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation 10-7</title>
+
+    <script>
+        window.onload = function() {
+            var myInt = "42"
+            let myOtherInt = 9001 //recommended this (smaller scope)
+            anotherInt = 9000 //avoid this
+
+            window.location // gives you the url
+
+            const THIS_IS_PI = 3.14159
+
+            let myDouble = [5, "hello", 3.14, "world"]
+            let myVar
+            let myOtherVar = null
+            alert("sadness")
+
+            console.log("this is a console message")
+            //let response = prompt("Do you want to play a game?")
+            //alert("You said: " + response)
+            if(true) {
+                let y = 42;
+            }
+            //console.log(y);
+
+            let number = 2
+            let aString = "2"
+            let aFloat = 2.0
+            console.log(number + 2)
+            console.log(number + "2")
+            console.log(number + parseInt(aString))
+
+            if(number === aFloat) { //this is false because it is a different type
+                console.log("true")
+            }
+            (function() {
+                console.log("hello")
+            })();
+
+            try {
+                arrowAdd2(2, 3, 4)
+            } catch(error) {
+                console.log(error)
+            } finally { }
+
+
+            let arrowAdd2 = (x, y, z) => x + 2
+            arrowAdd2(2, 3, 4)
+
+            var myArray = [1, 2, 3, 4]
+            for (let i = 0; i < array.length; i++) {
+                console.log(myArray[i])
+                
+            }
+            for(const myVal of myArray) {
+                console.log(myVal)
+            }
+
+            myArray.forEach(function(item, i){
+                console.log(item + " " + i)
+            })
+
+            var myObject = {
+                name: "default",
+                someNumber: 42,
+                anArray: [1, 2, 3, 4, 5, 6],
+
+                echo: function() {
+                    console.log(value)
+                },
+                get numberPlusOne() {
+                    return this.someNumber + 1
+                },
+                set someNumPluAno(num){
+                    this.someNumber += num;
+                }
+            };
+            myObject.name = "Bob Smith"
+            console.log(myObject.name)
+            myObject.echo("hello")
+
+            console.log(myObject.numberPlusOne)
+            console.log(myObject.someNumPluAno = 9000)
+            console.log(myObject.someNumber)
+
+            let dateTimeNow = new Date()
+            console.log(dateTimeNow)
+
+        }
+
+        var currentDate = {
+            dateTime: null,
+        }
+
+        document.getElementById("update-date").addEventListener("click", pizzaTime)
+        function pizzaTime() {
+            console.log("Is it Pizza Time???")
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Javascript pt 3, reloaded</h1> // get it like the matrix but also you can reload a web page.
+
+    <div>
+        <p>
+            <span id="date-text">
+                Click the button...
+            </span>
+        </p>
+        <p>
+            <button id="update-date">
+                Click to see current date time!
+            </button>
+        </p>
+    </div>
+
+    <a href="../../">Back to index page</a>
+</body>
+</html>
