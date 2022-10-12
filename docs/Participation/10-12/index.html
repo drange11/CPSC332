@@ -18,6 +18,7 @@
 
             //document represents the entire DOM
             var thisDocument = document.getElementById("container");
+            console.log(thisDocument.innerHTML);
             //window object
             console.log(window.innerWidth);
             console.log(window.innerHeight);
@@ -30,6 +31,28 @@
             var allDivs = document.querySelectorAll("body div");
             var firstDiv = document.querySelector("body div");
 
+            // event handler
+
+            document.getElementById("date-button-start").addEventListener("click", startClock);
+            document.getElementById("date-button-stop").addEventListener("click", stopClock);
+
+            var clock = null;
+            let dateTimeNow = null;
+
+            function startClock() {
+                console.log("start button clicked");
+                clock = setInterval(updateClock, 1000);
+            }
+            function stopClock() {
+                console.log("stop button clicked");
+                clearInterval(clock);
+            }
+
+            function updateClock() {
+                dateTimeNow = new Date();
+                document.getElementById("date-span").innerHTML = dateTimeNow;
+            }
+
 
         }//end of onload function
     </script>
@@ -39,6 +62,9 @@
     <div id="container">
         This is div content
     </div>
+    <!--<div id="container">
+        This is another div content
+    </div>-->
     <div>
         <ul class="unordered-list">
             <li>Item 1</li>
