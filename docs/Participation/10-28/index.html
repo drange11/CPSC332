@@ -91,6 +91,19 @@
             //2. Apply a background color, border, padding, and margin (your choice) to the ordered list using the object literal method demonstrated during lecture
             //3. Add an event listener to the ordered list list items so the color changes as you hover over each individual list item (color is your choice).
 
+            $("div").attr("class", "draggable ui-widget-content");
+
+            $(function(){
+                $(".draggable").draggable();
+            });
+            $("#container").css("align", "center")
+            $("#container").css( {
+                backgroundColor: "green",
+                border: "3px solid red",
+                padding: "10px",
+                margin: "10px"
+            });
+
         }); //end of ready function 
     </script>
 
